@@ -1,0 +1,33 @@
+<% include ./Partial/header.ejs %>
+<div class="container h-screen bg-gray-300 z-0">
+    <div class="content w-[25vw] mt-10 pl-2 pr-4 rounded-lg z-1 bg-white h-[90vh]">
+      <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo" class="img1" />
+      <p class="header mb-8">Login to see more</p>
+
+      <form action="/" method="post">
+        <!-- <input type="email" name="email" placeholder="Email" class="detail" /><br /> -->
+        <input type="text" name="username" placeholder="username" class="detail" />
+        <input type="password" name="password" placeholder="Password" class="detail" />
+        <input type="submit" class="btn int bg-black" value="Login">
+      </form>
+      <a href="/forgot">Forgot your password?</a>
+      <p class="or">OR</p>
+      <button class="btn fbk">
+        <i
+          class="fab fa-facebook fa-lg"
+          style="color: white; padding-right: 10px"
+        ></i
+        ><a href="#">Continue with Facebook</a></button
+      ><br />
+      <button class="btn ggl">
+        <i
+          class="fab fa-google"
+          style="color: rgb(11, 241, 22); padding-right: 10px"
+        ></i
+        ><a href="#">Continue with Google</a>
+      </button>
+      <a href="/register"><p class="text-sm mt-8 font-xm">Not on Pinterest yet? Sign up</p></a>
+
+    </div>
+  </div>
+<% include ./Partial/footer.ejs %>

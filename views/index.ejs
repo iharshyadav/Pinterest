@@ -1,24 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pinterest</title>
-  <link rel="stylesheet" href="../stylesheets/style.css">
-</head>
-<body>
-  <div class="container">
-    <div class="content">
-      <!--pinterest logo-->
+<% include ./Partial/header.ejs %>
+  <div class="container bg-gray-300 h-screen w-full z-0">
+    <div class="content w-[25vw] pl-2 pr-4 rounded-2xl z-1 bg-white h-[90.8vh] mt-9">
       <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo" class="img1" />
-      <p class="header">Log in to see more</p>
+      <p class="header">Sign Up to see more</p>
 
-      <input type="email" placeholder="Email" class="detail" /><br />
-      <input type="password" placeholder="Password" class="detail" />
-
-      <h4>Forgot your password?</h4>
-
-      <button class="btn int">Log in</button>
+      <form action="/register" method="post">
+        <input type="email" name="email" placeholder="Email" class="detail" /><br />
+        <input type="text" name="username" placeholder="username" class="detail" />
+        <input type="text" name="fullname" placeholder="Full Name" class="detail" /><br />
+        <input type="password" name="password" placeholder="Password" class="detail" />
+        <input type="submit"  class="btn int bg-black" value="Sign Up">
+      </form>
       <p class="or">OR</p>
       <button class="btn fbk">
         <i
@@ -40,12 +32,11 @@
           By continuing, you agree to Pinterest's
           <b>Terms of Service, Privacy policy.</b>
         </p>
-        <hr />
-        <p>Not on Pinterest yet? Sign up</p>
+        <hr>
+        <a href="/"><p class="underline">Have an account???</p></a>
       </footer>
     </div>
   </div>
   <a href="" class="upbtn">Sign up</a>
 
-</body>
-</html>
+  <% include ./Partial/footer.ejs %>
